@@ -1,22 +1,27 @@
-(+ (* 2 4) (- 4 6))     ; 6
+;; 1.1.scm
 
-(define a 3)
-(define b (+ a 1))
-(+ a b (* a b))         ; 19
-(= a b)                  
-			; #f
+(+ 137 349)
 
-(if (and (> b a) (< b (* a b)))
-    b
-    a)                  ; 4
+(- 1000 334)
 
-(cond ((= a 4) 6)
-      ((= b 4) (+ 6 7 a))
-      (else 25))        ; 16
+(* 5 99)
 
-(+ 2 (if (> b a) b a))  ; 6
+(/ 10 5)
 
-(* (cond ((> a b) a)
-         ((< a b) b)
-         (else -1))
-   (+ a 1))		; 16
+(+ 2.7 10) ; Implicit cast to float
+
+(+ 11 22 33 44) ; Apply on list
+
+(* 20 32 42)
+
+(+ (* 3 5)
+   (- 10 3)) ; Multiples instructions
+
+;; There is no limits to such nesting
+
+(+ (* 4
+      (+ 12 (* 4
+               (+ 1 1))
+         (* 1 2)))
+   (+ (- 10 7)
+      2)) ;; 93
