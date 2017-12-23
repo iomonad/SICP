@@ -44,7 +44,7 @@
 
 (define (solution1-3 a b c)
   (cond ((not (or (> a b) (> a c))) (sqsum b c))
-	(else (twolargest-sqsum b c a))))
+	(else (solution1-3 b c a))))
 
 ;; ~~ 1.4 ~~
 
